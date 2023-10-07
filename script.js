@@ -18,3 +18,7 @@ btnPopup.addEventListener('click', ()=> {
 iconClose.addEventListener('click', ()=> {
     wrapper.classList.remove('active-popup');
 });
+// Default Gulp Task
+exports.default = series(scssTask, jsTask, browserSyncServe, watchTask);
+// Build Script Task
+exports.build = series(scssTask, jsTask);
